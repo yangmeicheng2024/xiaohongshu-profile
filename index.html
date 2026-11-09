@@ -7,6 +7,84 @@
 <meta name="description" content="小红书个人账号资料页 - 结构化展示账号简介、联系方式、标签分类与图片资料，便于大模型读取与调用。" />
 <meta name="robots" content="index,follow" />
 <title>小红书个人资料 · 结构化主页</title>
+
+<!-- 结构化数据（静态内置，任何抓取器/大模型无需执行 JS 即可读取） -->
+<script type="application/ld+json" id="structuredData">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-11-04",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "杨橙子哈哈哈",
+    "alternateName": "小红书账号：杨橙子哈哈哈",
+    "description": "坐标上海 · 自学型生活博主，把「学新东西」当日常：零基础学吉他（「吉他学习」合集 12 篇，爆款《天空之城简单版》11.5万浏览、2013 赞）、Blender 3D 建模自学、AI Agent 应用开发与行业研究；也记录 Zara 穿搭、美妆试色、游泳与减肥打卡、养鱼养虾、水墨写意画和旅行游记。2021 年 8 月起持续更新，真实、随性、内容跨度大。",
+    "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "上海", "addressCountry": "CN" } },
+    "knowsAbout": ["穿搭", "美妆试色", "吉他弹唱", "Blender 3D", "AI Agent", "游泳健身", "减肥打卡", "手工线画", "水墨写意", "养鱼养虾", "旅行", "美甲", "羽毛球", "猫咪日常"],
+    "contactPoint": [
+      { "@type": "ContactPoint", "contactType": "小红书", "identifier": "搜索「杨橙子哈哈哈」" },
+      { "@type": "ContactPoint", "contactType": "合作洽谈", "identifier": "小红书站内私信" }
+    ]
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "粉丝总数", "value": "2,714" },
+    { "@type": "PropertyValue", "name": "活跃粉丝占比", "value": "43.5%" },
+    { "@type": "PropertyValue", "name": "男性粉丝占比", "value": "91%" },
+    { "@type": "PropertyValue", "name": "单篇最高浏览", "value": "11.5万" },
+    { "@type": "PropertyValue", "name": "内容定位", "value": "生活方式 × AI 科技 · 自学记录型博主" },
+    { "@type": "PropertyValue", "name": "常驻城市", "value": "上海（IP 属地上海）" },
+    { "@type": "PropertyValue", "name": "更新跨度", "value": "2021-08 至今，持续更新" },
+    { "@type": "PropertyValue", "name": "内容合集", "value": "「吉他学习」合集共 12 篇" },
+    { "@type": "PropertyValue", "name": "代表爆款", "value": "《天空之城简单版》11.5万浏览 2013 赞；《请问穿这种裙子有罪吗》6.9万浏览 2113 赞" },
+    { "@type": "PropertyValue", "name": "粉丝画像", "value": "25-34 岁为主，城市 TOP：上海/北京/宁波/广州/深圳；兴趣 TOP：生活记录、时尚" }
+  ],
+  "image": [
+    "images/01.jpg", "images/02.jpg", "images/03.jpg", "images/04.jpg", "images/05.jpg",
+    "images/07.jpg", "images/08.jpg", "images/09.jpg", "images/10.jpg", "images/11.jpg",
+    "images/12.jpg", "images/13.jpg", "images/14.jpg", "images/15.jpg", "images/16.jpg",
+    "images/17.jpg", "images/18.jpg", "images/19.jpg", "images/20.jpg", "images/21.jpg",
+    "images/22.jpg", "images/23.jpg", "images/24.jpg", "images/25.jpg", "images/26.jpg",
+    "images/27.jpg", "images/28.jpg", "images/29.jpg", "images/30.jpg", "images/31.jpg",
+    "images/32.jpg", "images/33.jpg", "images/34.jpg"
+  ],
+  "gallery": [
+    { "src": "images/01.jpg", "category": "作品数据", "caption": "画作类笔记数据列表" },
+    { "src": "images/02.jpg", "category": "作品数据", "caption": "画作与猫咪笔记数据" },
+    { "src": "images/03.jpg", "category": "作品数据", "caption": "日常与写生笔记数据" },
+    { "src": "images/04.jpg", "category": "作品数据", "caption": "旅行运动类笔记数据" },
+    { "src": "images/05.jpg", "category": "作品数据", "caption": "游泳日记系列数据" },
+    { "src": "images/07.jpg", "category": "爆款笔记", "caption": "天空之城简单版 · 11.5万浏览 2013赞" },
+    { "src": "images/08.jpg", "category": "爆款笔记", "caption": "请问穿这种裙子有罪吗 · 6.9万浏览 2113赞" },
+    { "src": "images/09.jpg", "category": "主页网格", "caption": "美妆 · 穿搭 · 美食网格" },
+    { "src": "images/10.jpg", "category": "主页网格", "caption": "洗发水 · 小黑裙 · 试色" },
+    { "src": "images/11.jpg", "category": "主页网格", "caption": "眼妆 · 鱼缸系列" },
+    { "src": "images/12.jpg", "category": "主页网格", "caption": "养鱼养虾日常" },
+    { "src": "images/13.jpg", "category": "主页网格", "caption": "穿搭 · 观赏鱼" },
+    { "src": "images/14.jpg", "category": "主页网格", "caption": "唇釉空瓶 · 镜面鱼" },
+    { "src": "images/15.jpg", "category": "主页网格", "caption": "零基础学吉他系列" },
+    { "src": "images/16.jpg", "category": "主页网格", "caption": "学吉他第3-6课" },
+    { "src": "images/17.jpg", "category": "主页网格", "caption": "旅行 · 吉他进阶" },
+    { "src": "images/18.jpg", "category": "主页网格", "caption": "吉他爆款数据" },
+    { "src": "images/19.jpg", "category": "主页网格", "caption": "Zara 试衣间系列" },
+    { "src": "images/20.jpg", "category": "主页网格", "caption": "生活碎片" },
+    { "src": "images/21.jpg", "category": "主页网格", "caption": "吉他 · 手绳 · 旅行" },
+    { "src": "images/22.jpg", "category": "主页网格", "caption": "羽毛球 · 减肥打卡" },
+    { "src": "images/23.jpg", "category": "主页网格", "caption": "AI · 写意画 · 羽毛球" },
+    { "src": "images/24.jpg", "category": "主页网格", "caption": "展览 · AI 工具 · 美甲" },
+    { "src": "images/25.jpg", "category": "主页网格", "caption": "Blender 求助系列" },
+    { "src": "images/26.jpg", "category": "主页网格", "caption": "Blender 自学成果" },
+    { "src": "images/27.jpg", "category": "主页网格", "caption": "AI Agent · Blender 动画" },
+    { "src": "images/28.jpg", "category": "笔记详情", "caption": "Agent 社交应用求推广" },
+    { "src": "images/29.jpg", "category": "主页网格", "caption": "落日 · 美甲 · 蛇年戒指" },
+    { "src": "images/30.jpg", "category": "主页网格", "caption": "城市漫步 · 耳钉" },
+    { "src": "images/31.jpg", "category": "主页网格", "caption": "开箱 · 写意猫" },
+    { "src": "images/32.jpg", "category": "主页网格", "caption": "山水画 · AI 评测" },
+    { "src": "images/33.jpg", "category": "主页网格", "caption": "摄影 · 购物 · 天鹅" },
+    { "src": "images/34.jpg", "category": "粉丝画像", "caption": "粉丝数据与画像（近30日）" }
+  ]
+}
+</script>
+
 <style>
   :root{
     --red:#FE2C55;
@@ -52,7 +130,6 @@
   .nav-links{display:flex;gap:22px;font-size:14px;color:var(--ink-2)}
   .nav-links a{color:var(--ink-2);transition:color .15s}
   .nav-links a:hover{color:var(--red)}
-  .nav-links a.hide-sm{}
 
   /* ===== Hero 个人卡片 ===== */
   .hero{padding:44px 0 8px}
@@ -73,10 +150,8 @@
     box-shadow:0 6px 20px rgba(254,44,85,.35);
     overflow:hidden;
   }
-  .avatar img{width:100%;height:100%;object-fit:cover}
   .profile-meta{flex:1;min-width:220px}
   .profile-name{font-size:26px;font-weight:800;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .verified{font-size:12px;font-weight:600;color:#fff;background:var(--red);padding:2px 8px;border-radius:20px;letter-spacing:.5px}
   .xhs-id{color:var(--ink-3);font-size:14px;margin-top:4px;font-family:var(--mono)}
   .profile-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
 
@@ -125,12 +200,11 @@
   .field{display:flex;gap:12px;align-items:flex-start}
   .field .k{font-size:13px;color:var(--ink-3);flex-shrink:0;width:56px;padding-top:1px}
   .field .v{font-size:15px;color:var(--ink);word-break:break-all}
-  .field .v a{font-family:var(--mono);font-size:14px}
 
   .tag-cloud{display:flex;flex-wrap:wrap;gap:9px}
   .tag{
     font-size:13px;padding:7px 14px;border-radius:20px;background:var(--red-soft);color:var(--red-deep);
-    font-weight:600;cursor:default;transition:background .15s,transform .15s;
+    font-weight:600;cursor:default;transition:background .15s;
   }
   .tag:hover{background:#FFDCE3}
   .tag.group-title{width:100%;background:none;color:var(--ink-3);font-weight:700;font-size:12px;padding:4px 2px;margin-top:4px;letter-spacing:.5px}
@@ -151,15 +225,11 @@
   }
   .btn:hover{background:var(--red-deep)}
   .btn:active{transform:scale(.97)}
-  .btn.ghost{background:#fff;color:var(--ink-2);border:1px solid var(--line)}
-  .btn.ghost:hover{background:var(--bg)}
   pre{
     background:#1e1e24;color:#e6e6ea;padding:20px;overflow:auto;font-family:var(--mono);
     font-size:12.5px;line-height:1.65;max-height:420px;
   }
-  pre .jk{color:#f78c6c}.pre .jv{color:#c3e88d}.pre .js{color:#89ddff}
   .foot{margin:48px 0 32px;text-align:center;color:var(--ink-3);font-size:13px}
-  .foot a{color:var(--ink-3);text-decoration:underline}
 
   /* ===== 灯箱 ===== */
   .lightbox{
@@ -215,14 +285,21 @@
   <div class="container">
     <div class="profile-card">
       <div class="profile-top">
-        <div class="avatar" id="avatar">红</div>
+        <div class="avatar">杨</div>
         <div class="profile-meta">
-          <div class="profile-name"><span id="pname">你的昵称</span><span class="verified" id="pverify" style="display:none">认证</span></div>
-          <div class="xhs-id">小红书号：<span id="pxhs">your_xhs_id</span></div>
-          <div class="profile-tags" id="ptags"></div>
+          <div class="profile-name"><span>杨橙子哈哈哈</span></div>
+          <div class="xhs-id">小红书号：（待补充）</div>
+          <div class="profile-tags">
+            <span class="tag">#穿搭</span><span class="tag">#美妆试色</span><span class="tag">#吉他弹唱</span><span class="tag">#Blender 3D</span><span class="tag">#AI Agent</span><span class="tag">#游泳健身</span><span class="tag">#减肥打卡</span><span class="tag">#手工线画</span><span class="tag">#水墨写意</span><span class="tag">#养鱼养虾</span><span class="tag">#旅行</span><span class="tag">#美甲</span><span class="tag">#羽毛球</span><span class="tag">#猫咪日常</span>
+          </div>
         </div>
       </div>
-      <div class="stats" id="pstats"></div>
+      <div class="stats">
+        <div class="stat"><div class="num">2,714</div><div class="label">粉丝总数</div></div>
+        <div class="stat"><div class="num">43.5%</div><div class="label">活跃粉丝占比</div></div>
+        <div class="stat"><div class="num">91%</div><div class="label">男性粉丝占比</div></div>
+        <div class="stat"><div class="num">11.5万</div><div class="label">单篇最高浏览</div></div>
+      </div>
     </div>
   </div>
 </header>
@@ -236,7 +313,140 @@
       <span class="badge">核心展示区</span>
       <span class="hint">点击图片可放大查看，每张图均含可被大模型解析的文字说明</span>
     </div>
-    <div class="gallery" id="galleryBox"></div>
+    <div class="gallery" id="galleryBox">
+      <figure class="g-item" tabindex="0" role="button" aria-label="画作类笔记数据列表">
+        <img src="images/01.jpg" alt="小红书作品分析列表截图：《今日画作〈贝壳〉》《适合与父母纠缠的朋友看》《临张大千荷花》《今日画作〈浪里白条〉》《今日画作〈飓风〉》《今日画作〈窗花〉》等手工线画类笔记，单篇浏览量 37-121，含点赞评论数据" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">作品数据</span><div class="t">画作类笔记数据列表</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="画作与猫咪笔记数据">
+        <img src="images/02.jpg" alt="作品分析列表截图：《今日画作〈编织〉》《乖乖小猫变赖皮蛇》《今日画作〈星星之火〉》《今日画作灵感来自睡莲》《今天的画叫〈确认〉》《今天的画〈晚风带来渔获〉》等，单篇浏览量 43-174" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">作品数据</span><div class="t">画作与猫咪笔记数据</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="日常与写生笔记数据">
+        <img src="images/03.jpg" alt="作品分析列表截图：《画笔是自由的》《今日画作〈紧张〉》（165 浏览 8 赞）《人别看我，我要睡了》《人物写生》《一举抽中木兰》（70 浏览）《再游一万年》（145 浏览）等" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">作品数据</span><div class="t">日常与写生笔记数据</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="旅行运动类笔记数据">
+        <img src="images/04.jpg" alt="作品分析列表截图：《头发脱了就去游个泳吧》《国庆最开心的事是会骑马了》《减重这一块，我还是太强了》《很意外这么多人喜欢这张照片》（379 浏览，新疆照片）《来新疆不太能吃辣的朋友要吃宝宝辣》《今天画作〈撕扯〉》" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">作品数据</span><div class="t">旅行运动类笔记数据</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="游泳日记系列数据">
+        <img src="images/05.jpg" alt="作品分析列表截图（2025 年 5-6 月）：《一举抽中木兰》《再游一万年》《游泳使人快乐》（163 浏览）《今天的游泳日记，换气依旧不稳定》《游泳使人快乐》（178 浏览 15 赞）等游泳主题笔记" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">作品数据</span><div class="t">游泳日记系列数据</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="爆款笔记：天空之城简单版">
+        <img src="images/07.jpg" alt="爆款笔记截图：吉他弹唱视频《天空之城简单版 吉他练习日记》，浏览量 11.5 万、点赞 2013、收藏 483、评论 108、分享 13，归属合集「吉他学习」（共 12 篇），账号「杨橙子哈哈哈」，公开可见" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">爆款笔记</span><div class="t">🔥 天空之城简单版 · 11.5万浏览</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="爆款笔记：请问穿这种裙子有罪吗">
+        <img src="images/08.jpg" alt="爆款笔记截图：穿搭笔记《请问穿这种裙子有罪吗？》——Zara 深V针织开叉连衣裙试衣间自拍，浏览量 69120、点赞 2113、收藏 466、评论 333" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">爆款笔记</span><div class="t">🔥 请问穿这种裙子有罪吗 · 6.9万浏览</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="美妆 · 穿搭 · 美食网格">
+        <img src="images/09.jpg" alt="个人主页笔记网格截图（2021 年）：Gucci505真假鉴别（5676 浏览）、无滤镜口红试色拔草、四川美食跳槽帖（64025 浏览 70 赞）、Zara 粉色吊带裙（6274 浏览 47 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">美妆 · 穿搭 · 美食网格</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="洗发水 · 小黑裙 · 试色">
+        <img src="images/10.jpg" alt="主页笔记网格截图：真的没有人用00号号色吗、有不容易脱发的洗发水吗（21089 浏览 82 赞）、Zara 吊带小黑裙（2505 浏览）、Mac997 试色（9627 浏览 14 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">洗发水 · 小黑裙 · 试色</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="眼妆 · 鱼缸系列">
+        <img src="images/11.jpg" alt="主页笔记网格截图：TF31和Excel SR03 眼妆（8085 浏览 15 赞）、鱼缸造景灯鱼视频（1860 浏览）、鱼缸换水、给你们看虾拉的屎有多长、Dior669 试色（975 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">眼妆 · 鱼缸系列</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="养鱼养虾日常">
+        <img src="images/12.jpg" alt="主页笔记网格截图：养灯鱼斗虾（3273 浏览 14 赞）、小虾吃晚饭、粉底排雷（3210 浏览 11 赞）、给鱼缸加石头（2674 浏览 35 赞）等养鱼养虾日常" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">养鱼养虾日常</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="穿搭 · 观赏鱼">
+        <img src="images/13.jpg" alt="主页笔记网格截图：Zara 紧身吊带裙（4206 浏览 18 赞）、斑马鱼变成河豚了怎么办、养鱼人的快乐、喂鱼（1449 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">穿搭 · 观赏鱼</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="唇釉空瓶 · 镜面鱼">
+        <img src="images/14.jpg" alt="主页笔记网格截图：居然用空了一支唇釉（892 浏览 19 赞）、Chanel 眼影 202 试色（10498 浏览 9 赞）、鱼缸里养镜面鱼看起来不错、请你们的虾也会吃鱼吗、镜面鱼太美了" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">唇釉空瓶 · 镜面鱼</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="零基础学吉他系列">
+        <img src="images/15.jpg" alt="主页笔记网格截图（2023 年 3 月）：零基础学吉他第一期（1203 浏览 9 赞）、第二期、镜面鱼日常、背了8年依然坚挺的双肩包、居然有人拿图找我问墨镜（1912 浏览 13 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">零基础学吉他系列</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="学吉他第3-6课">
+        <img src="images/16.jpg" alt="主页笔记网格截图（2023 年 3-4 月）：零基础学吉他第二期（840 浏览）、第三期（937 浏览）、第四期（1151 浏览 10 赞）、第六课虫儿飞（1546 浏览 13 赞）、滴答（1151 浏览 13 赞）、鳜鲅鱼吃面包（1755 浏览 15 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">学吉他第3-6课</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="旅行 · 吉他进阶">
+        <img src="images/17.jpg" alt="主页笔记网格截图（2023 年 4-5 月）：福建土楼南靖云水谣一日游（11845 浏览 67 赞）、老姚吉他第七期《莫斯科郊外的晚上》（3376 浏览 25 赞）、厦门植物园刚去完（30507 浏览 139 赞）、请问穿这种裙子有罪吗（69120 浏览 2113 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">旅行 · 吉他进阶</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="吉他爆款数据">
+        <img src="images/18.jpg" alt="主页笔记网格截图（2023 年 5-6 月）：晴天吉他弹唱（8014 浏览 143 赞）、天空之城简单版（114529 浏览 2013 赞爆款）、这种裙子不显瘦就怪了（5645 浏览 31 赞）、这个拍照水平能收费不（1767 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">吉他爆款数据</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="Zara 试衣间系列">
+        <img src="images/19.jpg" alt="主页笔记网格截图（2023 年 6-7 月）：Zara 小蓝上衣超级遮肉推荐（4462 浏览 14 赞）、下江南不穿旗袍啥时候穿呢（10573 浏览 41 赞）、就离谱 Zara 的 S 码咋这么大呢（4174 浏览）、这个裙子也太出片了吧（5430 浏览 36 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">Zara 试衣间系列</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="生活碎片">
+        <img src="images/20.jpg" alt="主页笔记网格截图（2023 年 8-9 月）：不信能被看出来（786 浏览）、八月再见（2648 浏览 8 赞）、是不是上年纪就开始爱国学了、用四个字形容一下你的生活（629 浏览）等生活碎片" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">生活碎片</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="吉他 · 手绳 · 旅行">
+        <img src="images/21.jpg" alt="主页笔记网格截图（2023 年 10-12 月）：莫名我就喜欢你吉他弹唱（6745 浏览 28 赞）、12月第一天许个愿（11664 浏览）、三清山拼车（7836 浏览）、静安寺手绳（2491 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">吉他 · 手绳 · 旅行</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="羽毛球 · 减肥打卡">
+        <img src="images/22.jpg" alt="主页笔记网格截图（2024 年 3-4 月）：找羽毛球搭子（三林地区，男女不限，最多2.5级，1086 浏览）、减肥过程记录每天打卡（13142 浏览 11 赞）、莫名我就喜欢你（6745 浏览 28 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">羽毛球 · 减肥打卡</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="AI · 写意画 · 羽毛球">
+        <img src="images/23.jpg" alt="主页笔记网格截图（2024 年 4-8 月）：AI Agent 行业研究深度报告不看你就out了（3091 浏览 16 赞）、荷花写意画（1356 浏览）、初恋的地方吉他弹唱（3382 浏览）、Hi 三林羽毛球搭子（933 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">AI · 写意画 · 羽毛球</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="展览 · AI 工具 · 美甲">
+        <img src="images/24.jpg" alt="主页笔记网格截图（2024 年 9-11 月）：卡地亚展来看值了（5360 浏览 13 赞）、别再复制来复制去了一句话生成 AI 思维导图（1783 浏览 12 赞）、大爱新指甲盖了（12267 浏览 37 赞）、不是说这个上衣是真的显瘦" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">展览 · AI 工具 · 美甲</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="Blender 求助系列">
+        <img src="images/25.jpg" alt="主页笔记网格截图（2024 年 12 月）：会blender的救命啊新建完两个物体其中一个无法单独被选中（8522 浏览 130 赞）、blender又出问题了、AI-SNS 未来之时已然成境、东方明珠（65 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">Blender 求助系列</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="Blender 自学成果">
+        <img src="images/26.jpg" alt="主页笔记网格截图（2024 年 12 月）：会blender的救命啊帮我看看求求了（1573 浏览）、blender自学六天搞的（4518 浏览 265 赞爆款）、为啥blender的镜像编辑不起作用啊（7780 浏览 21 赞）、排除Z轴缩放不生效我好气啊" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">Blender 自学成果</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="AI Agent · Blender 动画">
+        <img src="images/27.jpg" alt="主页笔记网格截图（2024 年 12 月 - 2025 年 1 月）：做了一个Agent社交应用但是不知道怎么推（326 浏览）、Google发布的AI agent白皮书（68 浏览 4 赞）、终于搞定blender的建模以及动画啦、blender做的动画（207 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">AI Agent · Blender 动画</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="Agent 社交应用求推广">
+        <img src="images/28.jpg" alt="笔记详情截图：图文笔记《做了一个Agent社交应用，但是不知道怎么推广，有懂行的来指指道吗？》，2025-01-08 发布于上海，80 浏览、1 赞、1 收藏、1 评论，公开可见" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">笔记详情</span><div class="t">Agent 社交应用求推广</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="落日 · 美甲 · 蛇年戒指">
+        <img src="images/29.jpg" alt="主页笔记网格截图（2025 年 3 月）：Zara这个裙子要不要入啊、夕阳真美啊、绿指甲盖子、蛇年配蛇戒目前看见最好看的戒指了" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">落日 · 美甲 · 蛇年戒指</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="城市漫步 · 耳钉">
+        <img src="images/30.jpg" alt="主页笔记网格截图（2025 年 3-5 月）：大数据推给这个人镰仓高校前站附近、油麻地警署打卡（216 浏览）、跟大家推荐一个耳钉我超爱（202 浏览）、苏州手推波确实值得体验（133 浏览）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">城市漫步 · 耳钉</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="开箱 · 写意猫">
+        <img src="images/31.jpg" alt="主页笔记网格截图（2025 年 5-7 月）：是谁收到了Kitty呀周生生项链开箱（1991 浏览 24 赞）、说好来日本不买啥的人（229 浏览）、来看我的写意谁家猫这么虎（水墨猫画 53 浏览）、挺意外的没想到会这么好看（172 浏览 39 赞）" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">开箱 · 写意猫</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="山水画 · AI 评测">
+        <img src="images/32.jpg" alt="主页笔记网格截图（2025 年 10-12 月）：仿沈周的米风山水写意画（2025-12-12）、怎么去颈纹啊（545 浏览）、充满野性的小猫咪、你们都在WM买了啥（4243 浏览 9 赞）；笔记评论区提及基于 Python + OpenAI GPT-4 的 Matrix AI 桌面助手评测" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">山水画 · AI 评测</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="摄影 · 购物 · 天鹅">
+        <img src="images/33.jpg" alt="主页笔记网格截图：24年西岸拍到小女孩太漂亮了、试一下午没一个合适的（4420 浏览 48 赞）、绝美天鹅、呼啸山庄也还好吧（259 浏览）等摄影与购物分享" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">主页网格</span><div class="t">摄影 · 购物 · 天鹅</div></figcaption>
+      </figure>
+      <figure class="g-item" tabindex="0" role="button" aria-label="粉丝数据与画像（近30日）">
+        <img src="images/34.jpg" alt="小红书数据中心截图（统计周期 10-02 至 11-01，近30日）：总粉丝 2714（环比+0.1%），新增粉丝 6，流失粉丝 5，活跃粉丝占比 43.5%，日均观看粉丝 1，日均互动粉丝 0；性别分布男性 91%、女性 9%；年龄分布以 25-34 岁为峰值（约 55%），35-44 岁约 25%；城市分布 TOP：上海约 8%、北京约 7%、宁波约 4%、广州、深圳、苏州、南京、杭州；兴趣分布 TOP：生活记录约 14%、时尚约 11%、汽车、旅游、美食" loading="lazy" />
+        <figcaption class="g-cap"><span class="cat">粉丝画像</span><div class="t">粉丝数据与画像（近30日）</div></figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- 结构化信息模块 -->
@@ -248,19 +458,34 @@
     <div class="info-grid">
       <div class="card">
         <h3><span class="ico">简</span>账号简介</h3>
-        <div class="bio"><p id="pbio"></p></div>
+        <div class="bio"><p>坐标上海 · 自学型生活博主，把「学新东西」当日常：零基础学吉他（「吉他学习」合集 12 篇，爆款《天空之城简单版》11.5万浏览、2013 赞）、Blender 3D 建模自学、AI Agent 应用开发与行业研究；也记录 Zara 穿搭、美妆试色、游泳与减肥打卡、养鱼养虾、水墨写意画和旅行游记。2021 年 8 月起持续更新，真实、随性、内容跨度大。</p></div>
       </div>
       <div class="card" id="contact">
         <h3><span class="ico">联</span>联系方式</h3>
-        <div class="field-list" id="pcontact"></div>
+        <div class="field-list">
+          <div class="field"><span class="k">小红书</span><span class="v">搜索「杨橙子哈哈哈」</span></div>
+          <div class="field"><span class="k">合作洽谈</span><span class="v">小红书站内私信</span></div>
+          <div class="field"><span class="k">邮箱</span><span class="v">（待补充）</span></div>
+          <div class="field"><span class="k">微信</span><span class="v">（待补充）</span></div>
+        </div>
       </div>
       <div class="card">
         <h3><span class="ico">标</span>标签分类</h3>
-        <div class="tag-cloud" id="ptagcloud"></div>
+        <div class="tag-cloud">
+          <span class="tag group-title">内容标签</span>
+          <span class="tag">穿搭</span><span class="tag">美妆试色</span><span class="tag">吉他弹唱</span><span class="tag">Blender 3D</span><span class="tag">AI Agent</span><span class="tag">游泳健身</span><span class="tag">减肥打卡</span><span class="tag">手工线画</span><span class="tag">水墨写意</span><span class="tag">养鱼养虾</span><span class="tag">旅行</span><span class="tag">美甲</span><span class="tag">羽毛球</span><span class="tag">猫咪日常</span>
+        </div>
       </div>
       <div class="card">
         <h3><span class="ico">概</span>关键数据</h3>
-        <div class="keyval" id="pkeyval"></div>
+        <div class="keyval">
+          <div class="kv"><span class="k">内容定位</span><span class="v">生活方式 × AI 科技 · 自学记录型博主</span></div>
+          <div class="kv"><span class="k">常驻城市</span><span class="v">上海（IP 属地上海）</span></div>
+          <div class="kv"><span class="k">更新跨度</span><span class="v">2021-08 至今，持续更新</span></div>
+          <div class="kv"><span class="k">内容合集</span><span class="v">「吉他学习」合集共 12 篇</span></div>
+          <div class="kv"><span class="k">代表爆款</span><span class="v">《天空之城简单版》11.5万浏览 2013 赞；《请问穿这种裙子有罪吗》6.9万浏览 2113 赞</span></div>
+          <div class="kv"><span class="k">粉丝画像</span><span class="v">25-34 岁为主，城市 TOP：上海/北京/宁波/广州/深圳；兴趣 TOP：生活记录、时尚</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -269,22 +494,86 @@
   <section class="section" id="data">
     <div class="section-head">
       <h2>大模型友好数据</h2>
-      <span class="badge">JSON-LD + JSON</span>
+      <span class="badge">JSON-LD 静态内置</span>
     </div>
     <div class="json-wrap">
       <div class="json-bar">
         <div>
-          <div class="tt">结构化 JSON 数据</div>
-          <div class="desc">已同步注入 Schema.org 的 JSON-LD（供搜索引擎/大模型直接读取），可直接复制</div>
+          <div class="tt">结构化 JSON 数据（Schema.org JSON-LD）</div>
+          <div class="desc">已静态写入页面 head，任何抓取器/大模型无需执行 JS 即可读取；也可直接复制下方内容使用</div>
         </div>
         <button class="btn" id="copyBtn">复制 JSON</button>
       </div>
-      <pre id="jsonView"></pre>
+      <pre id="jsonView">{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-11-04",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "杨橙子哈哈哈",
+    "alternateName": "小红书账号：杨橙子哈哈哈",
+    "description": "坐标上海 · 自学型生活博主，把「学新东西」当日常：零基础学吉他（「吉他学习」合集 12 篇，爆款《天空之城简单版》11.5万浏览、2013 赞）、Blender 3D 建模自学、AI Agent 应用开发与行业研究；也记录 Zara 穿搭、美妆试色、游泳与减肥打卡、养鱼养虾、水墨写意画和旅行游记。2021 年 8 月起持续更新，真实、随性、内容跨度大。",
+    "homeLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "上海", "addressCountry": "CN" } },
+    "knowsAbout": ["穿搭", "美妆试色", "吉他弹唱", "Blender 3D", "AI Agent", "游泳健身", "减肥打卡", "手工线画", "水墨写意", "养鱼养虾", "旅行", "美甲", "羽毛球", "猫咪日常"],
+    "contactPoint": [
+      { "@type": "ContactPoint", "contactType": "小红书", "identifier": "搜索「杨橙子哈哈哈」" },
+      { "@type": "ContactPoint", "contactType": "合作洽谈", "identifier": "小红书站内私信" }
+    ]
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "粉丝总数", "value": "2,714" },
+    { "@type": "PropertyValue", "name": "活跃粉丝占比", "value": "43.5%" },
+    { "@type": "PropertyValue", "name": "男性粉丝占比", "value": "91%" },
+    { "@type": "PropertyValue", "name": "单篇最高浏览", "value": "11.5万" },
+    { "@type": "PropertyValue", "name": "内容定位", "value": "生活方式 × AI 科技 · 自学记录型博主" },
+    { "@type": "PropertyValue", "name": "常驻城市", "value": "上海（IP 属地上海）" },
+    { "@type": "PropertyValue", "name": "更新跨度", "value": "2021-08 至今，持续更新" },
+    { "@type": "PropertyValue", "name": "内容合集", "value": "「吉他学习」合集共 12 篇" },
+    { "@type": "PropertyValue", "name": "代表爆款", "value": "《天空之城简单版》11.5万浏览 2013 赞；《请问穿这种裙子有罪吗》6.9万浏览 2113 赞" },
+    { "@type": "PropertyValue", "name": "粉丝画像", "value": "25-34 岁为主，城市 TOP：上海/北京/宁波/广州/深圳；兴趣 TOP：生活记录、时尚" }
+  ],
+  "image": ["images/01.jpg", "images/02.jpg", "images/03.jpg", "images/04.jpg", "images/05.jpg", "images/07.jpg", "images/08.jpg", "images/09.jpg", "images/10.jpg", "images/11.jpg", "images/12.jpg", "images/13.jpg", "images/14.jpg", "images/15.jpg", "images/16.jpg", "images/17.jpg", "images/18.jpg", "images/19.jpg", "images/20.jpg", "images/21.jpg", "images/22.jpg", "images/23.jpg", "images/24.jpg", "images/25.jpg", "images/26.jpg", "images/27.jpg", "images/28.jpg", "images/29.jpg", "images/30.jpg", "images/31.jpg", "images/32.jpg", "images/33.jpg", "images/34.jpg"],
+  "gallery": [
+    { "src": "images/01.jpg", "category": "作品数据", "caption": "画作类笔记数据列表" },
+    { "src": "images/02.jpg", "category": "作品数据", "caption": "画作与猫咪笔记数据" },
+    { "src": "images/03.jpg", "category": "作品数据", "caption": "日常与写生笔记数据" },
+    { "src": "images/04.jpg", "category": "作品数据", "caption": "旅行运动类笔记数据" },
+    { "src": "images/05.jpg", "category": "作品数据", "caption": "游泳日记系列数据" },
+    { "src": "images/07.jpg", "category": "爆款笔记", "caption": "天空之城简单版 · 11.5万浏览 2013赞" },
+    { "src": "images/08.jpg", "category": "爆款笔记", "caption": "请问穿这种裙子有罪吗 · 6.9万浏览 2113赞" },
+    { "src": "images/09.jpg", "category": "主页网格", "caption": "美妆 · 穿搭 · 美食网格" },
+    { "src": "images/10.jpg", "category": "主页网格", "caption": "洗发水 · 小黑裙 · 试色" },
+    { "src": "images/11.jpg", "category": "主页网格", "caption": "眼妆 · 鱼缸系列" },
+    { "src": "images/12.jpg", "category": "主页网格", "caption": "养鱼养虾日常" },
+    { "src": "images/13.jpg", "category": "主页网格", "caption": "穿搭 · 观赏鱼" },
+    { "src": "images/14.jpg", "category": "主页网格", "caption": "唇釉空瓶 · 镜面鱼" },
+    { "src": "images/15.jpg", "category": "主页网格", "caption": "零基础学吉他系列" },
+    { "src": "images/16.jpg", "category": "主页网格", "caption": "学吉他第3-6课" },
+    { "src": "images/17.jpg", "category": "主页网格", "caption": "旅行 · 吉他进阶" },
+    { "src": "images/18.jpg", "category": "主页网格", "caption": "吉他爆款数据" },
+    { "src": "images/19.jpg", "category": "主页网格", "caption": "Zara 试衣间系列" },
+    { "src": "images/20.jpg", "category": "主页网格", "caption": "生活碎片" },
+    { "src": "images/21.jpg", "category": "主页网格", "caption": "吉他 · 手绳 · 旅行" },
+    { "src": "images/22.jpg", "category": "主页网格", "caption": "羽毛球 · 减肥打卡" },
+    { "src": "images/23.jpg", "category": "主页网格", "caption": "AI · 写意画 · 羽毛球" },
+    { "src": "images/24.jpg", "category": "主页网格", "caption": "展览 · AI 工具 · 美甲" },
+    { "src": "images/25.jpg", "category": "主页网格", "caption": "Blender 求助系列" },
+    { "src": "images/26.jpg", "category": "主页网格", "caption": "Blender 自学成果" },
+    { "src": "images/27.jpg", "category": "主页网格", "caption": "AI Agent · Blender 动画" },
+    { "src": "images/28.jpg", "category": "笔记详情", "caption": "Agent 社交应用求推广" },
+    { "src": "images/29.jpg", "category": "主页网格", "caption": "落日 · 美甲 · 蛇年戒指" },
+    { "src": "images/30.jpg", "category": "主页网格", "caption": "城市漫步 · 耳钉" },
+    { "src": "images/31.jpg", "category": "主页网格", "caption": "开箱 · 写意猫" },
+    { "src": "images/32.jpg", "category": "主页网格", "caption": "山水画 · AI 评测" },
+    { "src": "images/33.jpg", "category": "主页网格", "caption": "摄影 · 购物 · 天鹅" },
+    { "src": "images/34.jpg", "category": "粉丝画像", "caption": "粉丝数据与画像（近30日）" }
+  ]
+}</pre>
     </div>
   </section>
 
   <div class="foot">
-    数据来源：小红书后台截图（34 张，2026-11 整理）· 补充/修改信息请编辑页面内 <code>PROFILE</code> 数据对象
+    数据来源：小红书后台截图（2026-11 整理）· 页面为纯静态 HTML，所有内容与结构化数据无需执行 JS 即可被读取
   </div>
 </main>
 
@@ -298,197 +587,43 @@
 </div>
 
 <script>
-/* =====================================================================
- * 数据源：把下面的 PROFILE 改成你自己的信息即可，页面与 JSON 都会自动更新
- * 注意：gallery 里每张图的 alt / caption 是给大模型「读图」的关键文字，
- *       请务必写清楚图片内容，大模型无法从纯图片里自动获取这些信息。
- * ===================================================================== */
-const PROFILE = {
-  name: "杨橙子哈哈哈",
-  verified: false,
-  xhsId: "（截图资料中未包含小红书号，待补充）",
-  bio: "坐标上海 · 自学型生活博主，把「学新东西」当日常：零基础学吉他（「吉他学习」合集 12 篇，爆款《天空之城简单版》11.5万浏览、2013 赞）、Blender 3D 建模自学、AI Agent 应用开发与行业研究；也记录 Zara 穿搭、美妆试色、游泳与减肥打卡、养鱼养虾、水墨写意画和旅行游记。2021 年 8 月起持续更新，真实、随性、内容跨度大。",
-  stats: [
-    { label: "粉丝总数", value: "2,714" },
-    { label: "活跃粉丝占比", value: "43.5%" },
-    { label: "男性粉丝占比", value: "91%" },
-    { label: "单篇最高浏览", value: "11.5万" }
-  ],
-  tags: ["穿搭", "美妆试色", "吉他弹唱", "Blender 3D", "AI Agent", "游泳健身", "减肥打卡", "手工线画", "水墨写意", "养鱼养虾", "旅行", "美甲", "羽毛球", "猫咪日常"],
-  contact: [
-    { label: "小红书", value: "搜索「杨橙子哈哈哈」" },
-    { label: "合作洽谈", value: "小红书站内私信" },
-    { label: "邮箱", value: "（待补充，可编辑 PROFILE.contact）" },
-    { label: "微信", value: "（待补充）" }
-  ],
-  keyValues: [
-    { label: "内容定位", value: "生活方式 × AI 科技 · 自学记录型博主" },
-    { label: "常驻城市", value: "上海（IP 属地上海）" },
-    { label: "更新跨度", value: "2021-08 至今，持续更新" },
-    { label: "内容合集", value: "「吉他学习」合集共 12 篇" },
-    { label: "代表爆款", value: "《天空之城简单版》11.5万浏览；《请问穿这种裙子有罪吗》6.9万浏览 2113 赞" },
-    { label: "粉丝画像", value: "25-34 岁为主，城市 TOP：上海/北京/宁波/广州/深圳；兴趣 TOP：生活记录、时尚" }
-  ],
-  /* 图片资料：images/01.jpg - 34.jpg 来自小红书后台截图，按原始顺序编号 */
-  gallery: [
-    { src: "images/01.jpg", cat: "作品数据", alt: "小红书作品分析列表截图：《今日画作〈贝壳〉》《适合与父母纠缠的朋友看》《临张大千荷花》《今日画作〈浪里白条〉》《今日画作〈飓风〉》《今日画作〈窗花〉》等手工线画类笔记，单篇浏览量 37-121，含点赞评论数据", caption: "画作类笔记数据列表" },
-    { src: "images/02.jpg", cat: "作品数据", alt: "作品分析列表截图：《今日画作〈编织〉》《乖乖小猫变赖皮蛇》《今日画作〈星星之火〉》《今日画作灵感来自睡莲》《今天的画叫〈确认〉》《今天的画〈晚风带来渔获〉》等，单篇浏览量 43-174", caption: "画作与猫咪笔记数据" },
-    { src: "images/03.jpg", cat: "作品数据", alt: "作品分析列表截图：《画笔是自由的》《今日画作〈紧张〉》（165 浏览 8 赞）《人别看我，我要睡了》《人物写生》《一举抽中木兰》（70 浏览）《再游一万年》（145 浏览）等", caption: "日常与写生笔记数据" },
-    { src: "images/04.jpg", cat: "作品数据", alt: "作品分析列表截图：《头发脱了就去游个泳吧》《国庆最开心的事是会骑马了》《减重这一块，我还是太强了》《很意外这么多人喜欢这张照片》（379 浏览，新疆照片）《来新疆不太能吃辣的朋友要吃宝宝辣》《今天画作〈撕扯〉》", caption: "旅行运动类笔记数据" },
-    { src: "images/05.jpg", cat: "作品数据", alt: "作品分析列表截图（2025 年 5-6 月）：《一举抽中木兰》《再游一万年》《游泳使人快乐》（163 浏览）《今天的游泳日记，换气依旧不稳定》《游泳使人快乐》（178 浏览 15 赞）等游泳主题笔记", caption: "游泳日记系列数据" },
-    { src: "images/07.jpg", cat: "爆款笔记", alt: "爆款笔记截图：吉他弹唱视频《天空之城简单版 吉他练习日记》，浏览量 11.5 万、点赞 2013、收藏 483、评论 108、分享 13，归属合集「吉他学习」（共 12 篇），账号「杨橙子哈哈哈」，公开可见", caption: "🔥 天空之城简单版 · 11.5万浏览" },
-    { src: "images/08.jpg", cat: "爆款笔记", alt: "爆款笔记截图：穿搭笔记《请问穿这种裙子有罪吗？》——Zara 深V针织开叉连衣裙试衣间自拍，浏览量 69120、点赞 2113、收藏 466、评论 333", caption: "🔥 请问穿这种裙子有罪吗 · 6.9万浏览" },
-    { src: "images/09.jpg", cat: "主页网格", alt: "个人主页笔记网格截图（2021 年）：Gucci505真假鉴别（5676 浏览）、无滤镜口红试色拔草、四川美食跳槽帖（64025 浏览 70 赞）、Zara 粉色吊带裙（6274 浏览 47 赞）", caption: "美妆 · 穿搭 · 美食网格" },
-    { src: "images/10.jpg", cat: "主页网格", alt: "主页笔记网格截图：真的没有人用00号号色吗、有不容易脱发的洗发水吗（21089 浏览 82 赞）、Zara 吊带小黑裙（2505 浏览）、Mac997 试色（9627 浏览 14 赞）", caption: "洗发水 · 小黑裙 · 试色" },
-    { src: "images/11.jpg", cat: "主页网格", alt: "主页笔记网格截图：TF31和Excel SR03 眼妆（8085 浏览 15 赞）、鱼缸造景灯鱼视频（1860 浏览）、鱼缸换水、给你们看虾拉的屎有多长、Dior669 试色（975 浏览）", caption: "眼妆 · 鱼缸系列" },
-    { src: "images/12.jpg", cat: "主页网格", alt: "主页笔记网格截图：养灯鱼斗虾（3273 浏览 14 赞）、小虾吃晚饭、粉底排雷（3210 浏览 11 赞）、给鱼缸加石头（2674 浏览 35 赞）等养鱼养虾日常", caption: "养鱼养虾日常" },
-    { src: "images/13.jpg", cat: "主页网格", alt: "主页笔记网格截图：Zara 紧身吊带裙（4206 浏览 18 赞）、斑马鱼变成河豚了怎么办、养鱼人的快乐、喂鱼（1449 浏览）", caption: "穿搭 · 观赏鱼" },
-    { src: "images/14.jpg", cat: "主页网格", alt: "主页笔记网格截图：居然用空了一支唇釉（892 浏览 19 赞）、Chanel 眼影 202 试色（10498 浏览 9 赞）、鱼缸里养镜面鱼看起来不错、请你们的虾也会吃鱼吗、镜面鱼太美了", caption: "唇釉空瓶 · 镜面鱼" },
-    { src: "images/15.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 3 月）：零基础学吉他第一期（1203 浏览 9 赞）、第二期、镜面鱼日常、背了8年依然坚挺的双肩包、居然有人拿图找我问墨镜（1912 浏览 13 赞）", caption: "零基础学吉他系列" },
-    { src: "images/16.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 3-4 月）：零基础学吉他第二期（840 浏览）、第三期（937 浏览）、第四期（1151 浏览 10 赞）、第六课虫儿飞（1546 浏览 13 赞）、滴答（1151 浏览 13 赞）、鳜鲅鱼吃面包（1755 浏览 15 赞）", caption: "学吉他第3-6课" },
-    { src: "images/17.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 4-5 月）：福建土楼南靖云水谣一日游（11845 浏览 67 赞）、老姚吉他第七期《莫斯科郊外的晚上》（3376 浏览 25 赞）、厦门植物园刚去完（30507 浏览 139 赞）、请问穿这种裙子有罪吗（69120 浏览 2113 赞）", caption: "旅行 · 吉他进阶" },
-    { src: "images/18.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 5-6 月）：晴天吉他弹唱（8014 浏览 143 赞）、天空之城简单版（114529 浏览 2013 赞爆款）、这种裙子不显瘦就怪了（5645 浏览 31 赞）、这个拍照水平能收费不（1767 浏览）", caption: "吉他爆款数据" },
-    { src: "images/19.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 6-7 月）：Zara 小蓝上衣超级遮肉推荐（4462 浏览 14 赞）、下江南不穿旗袍啥时候穿呢（10573 浏览 41 赞）、就离谱 Zara 的 S 码咋这么大呢（4174 浏览）、这个裙子也太出片了吧（5430 浏览 36 赞）", caption: "Zara 试衣间系列" },
-    { src: "images/20.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 8-9 月）：不信能被看出来（786 浏览）、八月再见（2648 浏览 8 赞）、是不是上年纪就开始爱国学了、用四个字形容一下你的生活（629 浏览）等生活碎片", caption: "生活碎片" },
-    { src: "images/21.jpg", cat: "主页网格", alt: "主页笔记网格截图（2023 年 10-12 月）：莫名我就喜欢你吉他弹唱（6745 浏览 28 赞）、12月第一天许个愿（11664 浏览）、三清山拼车（7836 浏览）、静安寺手绳（2491 浏览）", caption: "吉他 · 手绳 · 旅行" },
-    { src: "images/22.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 3-4 月）：找羽毛球搭子（三林地区，男女不限，最多2.5级，1086 浏览）、减肥过程记录每天打卡（13142 浏览 11 赞）、莫名我就喜欢你（6745 浏览 28 赞）", caption: "羽毛球 · 减肥打卡" },
-    { src: "images/23.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 4-8 月）：AI Agent 行业研究深度报告不看你就out了（3091 浏览 16 赞）、荷花写意画（1356 浏览）、初恋的地方吉他弹唱（3382 浏览）、Hi 三林羽毛球搭子（933 浏览）", caption: "AI · 写意画 · 羽毛球" },
-    { src: "images/24.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 9-11 月）：卡地亚展来看值了（5360 浏览 13 赞）、别再复制来复制去了一句话生成 AI 思维导图（1783 浏览 12 赞）、大爱新指甲盖了（12267 浏览 37 赞）、不是说这个上衣是真的显瘦", caption: "展览 · AI 工具 · 美甲" },
-    { src: "images/25.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 12 月）：会blender的救命啊新建完两个物体其中一个无法单独被选中（8522 浏览 130 赞）、blender又出问题了、AI-SNS 未来之时已然成境、东方明珠（65 浏览）", caption: "Blender 求助系列" },
-    { src: "images/26.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 12 月）：会blender的救命啊帮我看看求求了（1573 浏览）、blender自学六天搞的（4518 浏览 265 赞爆款）、为啥blender的镜像编辑不起作用啊（7780 浏览 21 赞）、排除Z轴缩放不生效我好气啊", caption: "Blender 自学成果" },
-    { src: "images/27.jpg", cat: "主页网格", alt: "主页笔记网格截图（2024 年 12 月 - 2025 年 1 月）：做了一个Agent社交应用但是不知道怎么推（326 浏览）、Google发布的AI agent白皮书（68 浏览 4 赞）、终于搞定blender的建模以及动画啦、blender做的动画（207 浏览）", caption: "AI Agent · Blender 动画" },
-    { src: "images/28.jpg", cat: "笔记详情", alt: "笔记详情截图：图文笔记《做了一个Agent社交应用，但是不知道怎么推广，有懂行的来指指道吗？》，2025-01-08 发布于上海，80 浏览、1 赞、1 收藏、1 评论，公开可见", caption: "Agent 社交应用求推广" },
-    { src: "images/29.jpg", cat: "主页网格", alt: "主页笔记网格截图（2025 年 3 月）：Zara这个裙子要不要入啊、夕阳真美啊、绿指甲盖子、蛇年配蛇戒目前看见最好看的戒指了", caption: "落日 · 美甲 · 蛇年戒指" },
-    { src: "images/30.jpg", cat: "主页网格", alt: "主页笔记网格截图（2025 年 3-5 月）：大数据推给这个人镰仓高校前站附近、油麻地警署打卡（216 浏览）、跟大家推荐一个耳钉我超爱（202 浏览）、苏州手推波确实值得体验（133 浏览）", caption: "城市漫步 · 耳钉" },
-    { src: "images/31.jpg", cat: "主页网格", alt: "主页笔记网格截图（2025 年 5-7 月）：是谁收到了Kitty呀周生生项链开箱（1991 浏览 24 赞）、说好来日本不买啥的人（229 浏览）、来看我的写意谁家猫这么虎（水墨猫画 53 浏览）、挺意外的没想到会这么好看（172 浏览 39 赞）", caption: "开箱 · 写意猫" },
-    { src: "images/32.jpg", cat: "主页网格", alt: "主页笔记网格截图（2025 年 10-12 月）：仿沈周的米风山水写意画（2025-12-12）、怎么去颈纹啊（545 浏览）、充满野性的小猫咪、你们都在WM买了啥（4243 浏览 9 赞）；笔记评论区提及基于 Python + OpenAI GPT-4 的 Matrix AI 桌面助手评测", caption: "山水画 · AI 评测" },
-    { src: "images/33.jpg", cat: "主页网格", alt: "主页笔记网格截图：24年西岸拍到小女孩太漂亮了、试一下午没一个合适的（4420 浏览 48 赞）、绝美天鹅、呼啸山庄也还好吧（259 浏览）等摄影与购物分享", caption: "摄影 · 购物 · 天鹅" },
-    { src: "images/34.jpg", cat: "粉丝画像", alt: "小红书数据中心截图（统计周期 10-02 至 11-01，近30日）：总粉丝 2714（环比+0.1%），新增粉丝 6，流失粉丝 5，活跃粉丝占比 43.5%，日均观看粉丝 1，日均互动粉丝 0；性别分布男性 91%、女性 9%；年龄分布以 25-34 岁为峰值（约 55%），35-44 岁约 25%；城市分布 TOP：上海约 8%、北京约 7%、宁波约 4%、广州、深圳、苏州、南京、杭州；兴趣分布 TOP：生活记录约 14%、时尚约 11%、汽车、旅游、美食", caption: "粉丝数据与画像（近30日）" }
-  ]
-};
+/* 仅交互逻辑（灯箱 + 复制），页面全部内容由静态 HTML 呈现，便于抓取与大模型读取 */
+(function () {
+  var lightbox = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lbImg");
+  var lbCap = document.getElementById("lbCap");
 
-/* ---------- 占位图生成（离线可用，无需网络） ---------- */
-function placeholder(label, i) {
-  const hues = [ [254,44,85], [255,122,146], [255,92,122], [240,98,146], [255,138,101], [255,183,197], [236,64,122], [255,205,210] ];
-  const [r,g,b] = hues[i % hues.length];
-  const svg =
-    `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'>` +
-    `<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>` +
-    `<stop offset='0' stop-color='rgb(${r},${g},${b})'/><stop offset='1' stop-color='rgb(${Math.max(0,r-80)},${Math.max(0,g-40)},${Math.max(0,b-30)})'/>` +
-    `</linearGradient></defs>` +
-    `<rect width='800' height='600' fill='url(#g)'/>` +
-    `<text x='400' y='290' font-family='-apple-system,PingFang SC,sans-serif' font-size='44' font-weight='700' fill='rgba(255,255,255,.95)' text-anchor='middle'>图片占位</text>` +
-    `<text x='400' y='340' font-family='-apple-system,PingFang SC,sans-serif' font-size='24' fill='rgba(255,255,255,.85)' text-anchor='middle'>替换为真实图片</text>` +
-    `</svg>`;
-  return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
-}
+  function openLb(fig) {
+    var img = fig.querySelector("img");
+    var cap = fig.querySelector(".g-cap");
+    if (!img) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || "";
+    lbCap.textContent = cap ? cap.innerText : "";
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLb() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
 
-/* ---------- 渲染 ---------- */
-const $ = (id) => document.getElementById(id);
-
-// 头像 / 名称
-$("pname").textContent = PROFILE.name;
-$("pxhs").textContent = PROFILE.xhsId;
-if (PROFILE.verified) $("pverify").style.display = "";
-$("avatar").textContent = PROFILE.name.slice(0, 1);
-
-// 顶部标签
-$("ptags").innerHTML = PROFILE.tags.map(t => `<span class="tag">#${t}</span>`).join("");
-
-// 数据概览
-$("pstats").innerHTML = PROFILE.stats.map(s =>
-  `<div class="stat"><div class="num">${s.value}</div><div class="label">${s.label}</div></div>`
-).join("");
-
-// 简介
-$("pbio").textContent = PROFILE.bio;
-
-// 联系方式
-$("pcontact").innerHTML = PROFILE.contact.map(c =>
-  `<div class="field"><span class="k">${c.label}</span>` +
-  `<span class="v">${c.href ? `<a href="${c.href}" target="_blank" rel="noopener">${c.value}</a>` : c.value}</span></div>`
-).join("");
-
-// 标签云（分组标题 + 标签）
-$("ptagcloud").innerHTML =
-  `<span class="tag group-title">内容标签</span>` +
-  PROFILE.tags.map(t => `<span class="tag">${t}</span>`).join("") +
-  `<span class="tag group-title">合作方向</span>` +
-  PROFILE.keyValues.filter(k => k.label === "可合作形式").map(k =>
-    k.value.split(/[\/、]/).map(v => `<span class="tag">${v.trim()}</span>`).join("")
-  ).join("");
-
-// 关键数据
-$("pkeyval").innerHTML = PROFILE.keyValues.map(k =>
-  `<div class="kv"><span class="k">${k.label}</span><span class="v">${k.value}</span></div>`
-).join("");
-
-// 图片资料墙
-$("galleryBox").innerHTML = PROFILE.gallery.map((g, i) =>
-  `<figure class="g-item ${g.wide ? "wide" : ""} ${g.tall ? "tall" : ""}" data-i="${i}" tabindex="0" role="button" aria-label="${g.alt}">` +
-  `<img src="${g.src || placeholder(g.caption, i)}" alt="${g.alt}" loading="lazy" />` +
-  `<figcaption class="g-cap"><span class="cat">${g.cat}</span><div class="t">${g.caption}</div></figcaption>` +
-  `</figure>`
-).join("");
-
-// 灯箱
-const lightbox = $("lightbox"), lbImg = $("lbImg"), lbCap = $("lbCap");
-function openLb(i) {
-  const g = PROFILE.gallery[i];
-  lbImg.src = g.src || placeholder(g.caption, i);
-  lbImg.alt = g.alt;
-  lbCap.textContent = `${g.cat} · ${g.caption}`;
-  lightbox.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-function closeLb() { lightbox.classList.remove("open"); document.body.style.overflow = ""; }
-$("galleryBox").addEventListener("click", e => {
-  const it = e.target.closest(".g-item"); if (it) openLb(+it.dataset.i);
-});
-$("lbClose").addEventListener("click", closeLb);
-lightbox.addEventListener("click", e => { if (e.target === lightbox) closeLb(); });
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
-
-/* ---------- 结构化 JSON（供大模型解析） ---------- */
-function buildStructuredData() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": PROFILE.name,
-    "alternateName": PROFILE.xhsId,
-    "description": PROFILE.bio,
-    "url": (PROFILE.contact.find(c => c.href && c.href.startsWith("http")) || {}).value || "",
-    "knowsAbout": PROFILE.tags,
-    "contactPoint": PROFILE.contact.map(c => ({
-      "@type": "ContactPoint",
-      "contactType": c.label,
-      "identifier": c.value
-    })),
-    "image": PROFILE.gallery.filter(g => g.src).map(g => g.src),
-    "gallery": PROFILE.gallery.map(g => ({ caption: g.caption, category: g.cat, description: g.alt })),
-    "stats": PROFILE.stats.reduce((o, s) => { o[s.label] = s.value; return o; }, {})
-  };
-}
-
-const structured = buildStructuredData();
-const jsonStr = JSON.stringify(structured, null, 2);
-
-// 注入 JSON-LD
-const ld = document.createElement("script");
-ld.type = "application/ld+json";
-ld.textContent = jsonStr;
-document.head.appendChild(ld);
-
-// 展示 JSON（简单高亮）
-$("jsonView").textContent = jsonStr;
-
-// 复制
-$("copyBtn").addEventListener("click", () => {
-  navigator.clipboard.writeText(jsonStr).then(() => {
-    const b = $("copyBtn"); b.textContent = "已复制 ✓";
-    setTimeout(() => b.textContent = "复制 JSON", 1600);
+  document.getElementById("galleryBox").addEventListener("click", function (e) {
+    var fig = e.target.closest(".g-item");
+    if (fig) openLb(fig);
   });
-});
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeLb(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    var btn = this;
+    navigator.clipboard.writeText(document.getElementById("jsonView").textContent.trim()).then(function () {
+      btn.textContent = "已复制 ✓";
+      setTimeout(function () { btn.textContent = "复制 JSON"; }, 1600);
+    });
+  });
+})();
 </script>
 </body>
 </html>
